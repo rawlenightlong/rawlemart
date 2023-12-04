@@ -21,9 +21,9 @@ export default async function RecoverPassword() {
 
       <div className={classes.formWrapper}>
         <div className={classes.formContainer}>
-          <RenderParams className={classes.params}/>
-          <Link href='/login' className={classes.backLink}>
-            <Image src='assets/icons/arrow-left.svg' alt='left arrow' width={24} height={24} />
+          <RenderParams className={classes.params} />
+          <Link href="/login" className={classes.backLink}>
+            <Image src="assets/icons/arrow-left.svg" alt="left arrow" width={24} height={24} />
             <p>Back</p>
           </Link>
           <div className={classes.formTitle}>

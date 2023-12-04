@@ -5,8 +5,6 @@ import classes from './index.module.scss'
 import { Category, Media } from '../../../../payload/payload-types'
 import Link from 'next/link'
 import { useFilter } from '../../../_providers/Filter'
-import { useContext } from 'react'
-import { FilterContext } from '../../../_providers/Filter'
 
 type CategoryCardProps = {
   category: Category
@@ -14,7 +12,7 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ category }: { category: Category }) => {
   const media = category.media as Media
-  const { setCategoryFilters } = useContext(FilterContext)
+  const { setCategoryFilters } = useFilter()
 
   return (
     <Link
