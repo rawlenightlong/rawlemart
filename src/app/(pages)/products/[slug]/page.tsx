@@ -2,9 +2,7 @@ import React from 'react'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-
 import type { Product } from '../../../../payload/payload-types'
-
 import { Product as ProductType } from '../../../../payload/payload-types'
 import { fetchDoc } from '../../../_api/fetchDoc'
 import { fetchDocs } from '../../../_api/fetchDocs'
@@ -36,12 +34,11 @@ export default async function Product({ params: { slug } }) {
     notFound()
   }
 
-  const { layout, relatedProducts } = product
+  const { relatedProducts } = product
 
   return (
-    <React.Fragment>
+    <>
       <ProductHero product={product} />
-      <Blocks blocks={layout} />
       {product?.enablePaywall && <PaywallBlocks productSlug={slug as string} disableTopPadding />}
       <Blocks
         disableTopPadding
@@ -52,30 +49,10 @@ export default async function Product({ params: { slug } }) {
             relationTo: 'products',
             introContent: [
               {
-                type: 'h4',
+                type: 'h3',
                 children: [
                   {
                     text: 'Related Products',
-                  },
-                ],
-              },
-              {
-                type: 'p',
-                children: [
-                  {
-                    text: 'The products displayed here are individually selected for this page. Admins can select any number of related products to display here and the layout will adjust accordingly. Alternatively, you could swap this out for the "Archive" block to automatically populate products by category complete with pagination. To manage related posts, ',
-                  },
-                  {
-                    type: 'link',
-                    url: `/admin/collections/products/${product.id}`,
-                    children: [
-                      {
-                        text: 'navigate to the admin dashboard',
-                      },
-                    ],
-                  },
-                  {
-                    text: '.',
                   },
                 ],
               },
@@ -84,7 +61,7 @@ export default async function Product({ params: { slug } }) {
           },
         ]}
       />
-    </React.Fragment>
+    </>
   )
 }
 
