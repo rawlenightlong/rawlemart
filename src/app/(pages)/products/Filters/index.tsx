@@ -1,12 +1,11 @@
 'use client'
 
 import { useContext } from 'react'
-import { FilterContext } from '../../../_providers/Filter'
 import type { Category } from '../../../../payload/payload-types'
 import { Checkbox } from '../../../_components/Checkbox'
 import { HR } from '../../../_components/HR'
 import { RadioButton } from '../../../_components/Radio'
-
+import { FilterContext } from '../../../_providers/Filter'
 import classes from './index.module.scss'
 
 const Filters = ({ categories }: { categories: Category[] }) => {

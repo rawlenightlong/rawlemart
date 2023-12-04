@@ -1,8 +1,7 @@
-import React from 'react'
+import Link from 'next/link'
 import { Category } from '../../../payload/payload-types'
 import CategoryCard from './CategoryCard'
 import classes from './index.module.scss'
-import Link from 'next/link'
 
 const Categories = ({ categories }: { categories: Category[] }) => {
   return (

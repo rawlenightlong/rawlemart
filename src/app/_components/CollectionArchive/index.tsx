@@ -1,7 +1,6 @@
 'use client'
-
-import { Fragment, useCallback, useEffect, useRef, useState, useContext } from 'react'
 import qs from 'qs'
+import { Fragment, useCallback, useContext, useEffect, useRef, useState } from 'react'
 
 import { Product } from '../../../payload/payload-types'
 import type { ArchiveBlockProps } from '../../_blocks/ArchiveBlock/types'
@@ -10,8 +9,8 @@ import { Card } from '../Card'
 import { PageRange } from '../PageRange'
 import { Pagination } from '../Pagination'
 
-import classes from './index.module.scss'
 import { FilterContext } from '../../_providers/Filter'
+import classes from './index.module.scss'
 
 type Result = {
   totalDocs: number
