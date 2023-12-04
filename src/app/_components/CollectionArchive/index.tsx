@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Fragment, useCallback, useEffect, useRef, useState } from 'react'
+import { Fragment, useCallback, useEffect, useRef, useState, useContext } from 'react'
 import qs from 'qs'
 
 import { Product } from '../../../payload/payload-types'
@@ -11,7 +11,6 @@ import { PageRange } from '../PageRange'
 import { Pagination } from '../Pagination'
 
 import classes from './index.module.scss'
-import { useContext } from 'react'
 import { FilterContext } from '../../_providers/Filter'
 
 type Result = {

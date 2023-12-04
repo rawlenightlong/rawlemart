@@ -24,9 +24,7 @@ const Products = async () => {
     })
 
     categories = await fetchDocs<Category>('categories')
-  } catch (error) {
-    console.log(error)
-  }
+  } catch (error) {}
 
   return (
     <div className={classes.container}>

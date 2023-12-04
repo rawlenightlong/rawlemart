@@ -1,5 +1,3 @@
-import React from 'react'
-
 import type { Footer } from '../../../payload/payload-types'
 import { fetchFooter } from '../../_api/fetchGlobals'
 import FooterComponent from './FooterComponent'
