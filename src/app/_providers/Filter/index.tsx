@@ -39,5 +39,5 @@ export const FilterProvider = ({children} : {children: React.ReactNode}) => {
 }
 
 export const useFilter = () => {
-    useContext(FilterContext)
+    return useContext(FilterContext)
 }
