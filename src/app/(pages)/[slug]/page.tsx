@@ -1,8 +1,8 @@
-import React from 'react'
+
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-
+import { Fragment } from 'react'
 import type { Category, Page } from '../../../payload/payload-types'
 import { staticHome } from '../../../payload/seed/home-static'
 import { fetchDoc } from '../../_api/fetchDoc'
@@ -58,7 +58,7 @@ export default async function Page({ params: { slug = 'home' } }) {
   const { hero, layout } = page
 
   return (
-    <React.Fragment>
+    <Fragment>
       {slug === 'home' ? (
         <section>
           <Hero {...hero} />
@@ -77,7 +77,7 @@ export default async function Page({ params: { slug = 'home' } }) {
           />
         </>
       )}
-    </React.Fragment>
+    </Fragment>
   )
 }
 
